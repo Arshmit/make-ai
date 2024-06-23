@@ -2,7 +2,7 @@ make-ai by Qubits
 
 Introduction
 
-make-ai is a website which helps users to make their own AI Model by dragging and dropping layers from Feedforward Neural Networks (FNNs), Convolutional Neural Networks (CNNs) and Large Language Models (LLMs) which connect together and make a brand new AI model. 
+make-ai is a website which helps users to make their own AI Model by dragging and dropping layers from various AI language models. For the purpose of the hackathon, we have integrated layers from Feedforward Neural Networks (FNNs), Convolutional Neural Networks (CNNs) and Large Language Models (LLMs) which connect together and make a brand new AI model. 
 
 Setup
 1. Install all dependencies of all modules:
