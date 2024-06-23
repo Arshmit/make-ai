@@ -1,6 +1,6 @@
 import { INode, INodeParams, INodeOutputsValue, INodeOptionsValue } from '../../../src/Interface'
 
-class StickyNote implements INode {
+class StickyNote_Layers implements INode {
     label: string
     name: string
     version: number
@@ -17,8 +17,9 @@ class StickyNote implements INode {
         this.name = 'Dense Layer'
         this.version = 1.0
         this.type = 'Layer'
-        this.icon = 'customfunction.svg'
-        this.category = 'Utilities'
+        this.icon = 'Denselayer.svg'
+        this.category = 'Layers'
+        this.baseClasses = [this.type]
         this.description = 'Dense Layer Description goes here'
         this.inputs = [
             {
@@ -32,15 +33,20 @@ class StickyNote implements INode {
                     { label: 'Softmax', name: 'softmax' },
                     { label: 'Tanh', name: 'tanh' }
                 ] as INodeOptionsValue[],
-                optional: true
+                optional: false
+            },
+            {
+                label: 'Input',
+                name: 'activation',
+                type: 'array',
+                placeholder: 'Type something here'
             }
         ]
-        this.baseClasses = [this.type]
     }
 
     async init(): Promise<any> {
-        return new StickyNote()
+        return new StickyNote_Layers()
     }
 }
 
-module.exports = { nodeClass: StickyNote }
+module.exports = { nodeClass: StickyNote_Layers }

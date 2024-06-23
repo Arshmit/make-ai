@@ -1,6 +1,6 @@
-import { INode, INodeParams, INodeOutputsValue, INodeOptionsValue } from '../../../src/Interface'
+import { INode, INodeParams, INodeOptionsValue } from '../../../src/Interface'
 
-class StickyNote implements INode {
+class LangFuse_Layers implements INode {
     label: string
     name: string
     version: number
@@ -9,17 +9,17 @@ class StickyNote implements INode {
     icon: string
     category: string
     baseClasses: string[]
-    inputs: INodeParams[]
-    outputs: INodeOutputsValue[]
+    inputs?: INodeParams[]
+    credential: INodeParams
 
     constructor() {
         this.label = 'Dense Layer'
-        this.name = 'Dense Layer'
+        this.name = 'Dense layer'
         this.version = 1.0
-        this.type = 'Layer'
-        this.icon = 'customfunction.svg'
-        this.category = 'Utilities'
-        this.description = 'Dense Layer Description goes here'
+        this.type = 'output'
+        this.icon = 'Langfuse.svg'
+        this.category = 'Layers'
+        this.baseClasses = [this.type]
         this.inputs = [
             {
                 label: 'Activation Function',
@@ -32,15 +32,20 @@ class StickyNote implements INode {
                     { label: 'Softmax', name: 'softmax' },
                     { label: 'Tanh', name: 'tanh' }
                 ] as INodeOptionsValue[],
-                optional: true
+                optional: false
+            },
+            {
+                label: 'Input',
+                name: 'activation',
+                type: 'array',
+                placeholder: 'Type something here'
             }
         ]
-        this.baseClasses = [this.type]
     }
 
     async init(): Promise<any> {
-        return new StickyNote()
+        return new LangFuse_Layers()
     }
 }
 
-module.exports = { nodeClass: StickyNote }
+module.exports = { nodeClass: LangFuse_Layers }

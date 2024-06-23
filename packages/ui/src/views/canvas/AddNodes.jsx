@@ -324,64 +324,6 @@ const AddNodes = ({ nodesData, node, isAgentCanvas }) => {
                                                 'aria-label': 'weight'
                                             }}
                                         />
-                                        {!isAgentCanvas && (
-                                            <Tabs
-                                                sx={{ position: 'relative', minHeight: '50px', height: '50px' }}
-                                                variant='fullWidth'
-                                                value={tabValue}
-                                                onChange={handleTabChange}
-                                                aria-label='tabs'
-                                            >
-                                                {['LangChain', 'LlamaIndex'].map((item, index) => (
-                                                    <Tab
-                                                        icon={
-                                                            <div
-                                                                style={{
-                                                                    borderRadius: '50%'
-                                                                }}
-                                                            >
-                                                                <img
-                                                                    style={{
-                                                                        width: '25px',
-                                                                        height: '25px',
-                                                                        borderRadius: '50%',
-                                                                        objectFit: 'contain'
-                                                                    }}
-                                                                    src={index === 0 ? LangChainPNG : LlamaindexPNG}
-                                                                    alt={item}
-                                                                />
-                                                            </div>
-                                                        }
-                                                        iconPosition='start'
-                                                        sx={{ minHeight: '50px', height: '50px' }}
-                                                        key={index}
-                                                        label={item}
-                                                        {...a11yProps(index)}
-                                                    ></Tab>
-                                                ))}
-                                                <div
-                                                    style={{
-                                                        display: 'flex',
-                                                        flexDirection: 'row',
-                                                        alignItems: 'center',
-                                                        borderRadius: 10,
-                                                        background: 'rgb(254,252,191)',
-                                                        paddingLeft: 6,
-                                                        paddingRight: 6,
-                                                        paddingTop: 1,
-                                                        paddingBottom: 1,
-                                                        width: 'max-content',
-                                                        position: 'absolute',
-                                                        top: 0,
-                                                        right: 0,
-                                                        fontSize: '0.65rem',
-                                                        fontWeight: 700
-                                                    }}
-                                                >
-                                                    <span style={{ color: 'rgb(116,66,16)' }}>BETA</span>
-                                                </div>
-                                            </Tabs>
-                                        )}
 
                                         <Divider />
                                     </Box>
