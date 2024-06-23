@@ -1,17 +1,27 @@
 make-ai by Qubits
 
-Introduction
+Introduction:
 
 make-ai is a website which helps users to make their own AI Model by dragging and dropping layers from various AI language models. For the purpose of the hackathon, we have integrated layers from Feedforward Neural Networks (FNNs), Convolutional Neural Networks (CNNs) and Large Language Models (LLMs) which connect together and make a brand new AI model. 
 
-Setup
-1. Install all dependencies of all modules:
+Setup:
+
+Installing ```pnpm``` is required for using it because ```pnpm``` is a separate package manager from ```npm``` or ```yarn```, and it needs to be present on your system to execute its commands and manage your project dependencies.
+
+1. Install pnpm using npm, which comes bundled with Node.js.
+   
+```npm install -g pnpm```
+
+2. Install all dependencies of all modules:
+   
 ```pnpm install```
 
-2. Build all the code:
+3. Build all the code:
+   
 ```pnpm build```
 
-3. Start the app:
+4. Start the app:
+   
 ```pnpm start```
 
 Technology Used
