@@ -3,7 +3,6 @@ import Box from '@mui/material/Box'
 import Slider from '@mui/material/Slider'
 import { Grid, Input } from '@mui/material'
 import PropTypes from 'prop-types'
-
 const BoxShadow = '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)'
 
 const CustomInputSlider = styled(Slider)(({ theme }) => ({

@@ -28,7 +28,7 @@ import Transitions from '@/ui-component/extended/Transitions'
 import AboutDialog from '@/ui-component/dialog/AboutDialog'
 
 // assets
-import { IconLogout, IconSettings, IconInfoCircle } from '@tabler/icons-react'
+import { IconLogout, IconInfoCircle } from '@tabler/icons-react'
 
 import './index.css'
 
@@ -51,10 +51,6 @@ const ProfileSection = ({ username, handleLogout }) => {
         setOpen(false)
     }
 
-    const handleToggle = () => {
-        setOpen((prevOpen) => !prevOpen)
-    }
-
     const prevOpen = useRef(open)
     useEffect(() => {
         if (prevOpen.current === true && open === false) {
@@ -66,26 +62,6 @@ const ProfileSection = ({ username, handleLogout }) => {
 
     return (
         <>
-            <ButtonBase ref={anchorRef} sx={{ borderRadius: '12px', overflow: 'hidden' }}>
-                <Avatar
-                    variant='rounded'
-                    sx={{
-                        ...theme.typography.commonAvatar,
-                        ...theme.typography.mediumAvatar,
-                        transition: 'all .2s ease-in-out',
-                        background: theme.palette.secondary.light,
-                        color: theme.palette.secondary.dark,
-                        '&:hover': {
-                            background: theme.palette.secondary.dark,
-                            color: theme.palette.secondary.light
-                        }
-                    }}
-                    onClick={handleToggle}
-                    color='inherit'
-                >
-                    <IconSettings stroke={1.5} size='1.3rem' />
-                </Avatar>
-            </ButtonBase>
             <Popper
                 placement='bottom-end'
                 open={open}
