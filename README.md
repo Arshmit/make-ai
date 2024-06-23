@@ -16,4 +16,6 @@ Setup
 
 Technology Used
 
-We used Python to write our layers. We got our front-end from a tech stack. The languages used for our front-end is Javascript and typescript. We used ReactJS to code our front end. We also have a chatbot which helps with clarifying any doubts a user might encounter while using our site. We used you.com's API in our chatbot as you.com has a human-like tone and we wanted our chatbot to feel as human as possible.
+We used Python to write our layers. We got our front-end from and tech stack from flowise (an open source github repo). The languages used for our front-end is Javascript and typescript. We used ReactJS to code our front end.
+
+In-Progress:  We also have a chatbot which helps with clarifying any doubts a user might encounter while using our site. We used you.com's API in our chatbot as you.com has a human-like tone and we wanted our chatbot to feel as human as possible.
