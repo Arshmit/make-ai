@@ -22,8 +22,8 @@ class Airtable_Agents implements INode {
     inputs: INodeParams[]
 
     constructor() {
-        this.label = 'Airtable Agent'
-        this.name = 'airtableAgent'
+        this.label = 'Layer 1'
+        this.name = 'Test'
         this.version = 2.0
         this.type = 'AgentExecutor'
         this.category = 'Agents'
