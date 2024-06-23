@@ -6,13 +6,13 @@ make-ai is a website which helps users to make their own AI Model by dragging an
 
 Setup
 1. Install all dependencies of all modules:
-pnpm install
+```pnpm install```
 
 2. Build all the code:
-pnpm build
+```pnpm build```
 
 3. Start the app:
-pnpm start
+```pnpm start```
 
 Technology Used
 
